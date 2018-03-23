@@ -26,6 +26,7 @@
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
+                    <createDependencyReducedPom>true</createDependencyReducedPom>
                     <transformers>
                         <transformer
                                 implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
@@ -34,6 +35,11 @@
                             </manifestEntries>
                         </transformer>
                     </transformers>
+                    <!--<artifactSet>-->
+                        <!--<excludes>-->
+                            <!--<exclude>se.lars:port-selector:*:*</exclude>-->
+                        <!--</excludes>-->
+                    <!--</artifactSet>-->
                 </configuration>
                 <executions>
                     <execution>
