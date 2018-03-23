@@ -7,7 +7,7 @@ import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
 
-@Mojo(name = "port-selector", defaultPhase = LifecyclePhase.PRE_INTEGRATION_TEST)
+@Mojo(name = "port-select", defaultPhase = LifecyclePhase.PRE_INTEGRATION_TEST)
 public class PortSelectorMojo extends AbstractMojo {
     @Component
     protected MavenProject project;
@@ -23,4 +23,6 @@ public class PortSelectorMojo extends AbstractMojo {
         System.out.println("executing plugin: " + inputFile + " - " + outputFile);
         project.getProperties().setProperty("mock.port", "8080");
     }
+
+    
 }

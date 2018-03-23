@@ -54,7 +54,7 @@
                         <id>port-selector</id>
                         <phase>pre-integration-test</phase>
                         <goals>
-                            <goal>port-selector</goal>
+                            <goal>port-select</goal>
                         </goals>
                         <configuration>
                             <inputFile>xxxx</inputFile>
@@ -82,7 +82,8 @@
                             <arguments>
                                 <argument>${java.home}/bin/java</argument>
                                 <argument>-jar</argument>
-                                <argument>${project.basedir}/target/${artifactId}-${project.version}.jar</argument>
+                                <argument>${project.basedir}/target/${project.artifactId}-${project.version}.jar
+                                </argument>
                             </arguments>
                         </configuration>
                     </execution>
